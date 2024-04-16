@@ -5,6 +5,10 @@
     <title>test</title>
 </head>
 <body>
-<h1 th:write = "${test_attribute}" ></h1>
+<form action="#" th:action="@{/quiz/save}" th:object="${frage}" method="post">
+    <input th:field ="*{text}"/>
+    <input type="hidden" th:field="*{id}"/>
+    <input type ="submit" value = "save" />
+</form>
 </body>
 </html>
